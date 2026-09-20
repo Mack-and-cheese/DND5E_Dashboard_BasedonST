@@ -1,0 +1,34 @@
+# 依赖
+node_modules/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE/编辑器
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.swp
+*.swo
+.claude/
+.vscode/
+
+# 临时文件
+*.tmp
+*.temp
+
+# 忽略的文件
+API_DOCUMENTATION.md
+map_gen_test.html
+regex-dnd-beautify.json
+
+# 酒馆说明
+sillytavern说明/
+tavern_resource-main/
+plans/
+.roo/
