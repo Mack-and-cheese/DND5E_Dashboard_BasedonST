@@ -970,8 +970,8 @@ export default {
 
                 if (!this._charCreatorState) {
                     let apiConfig = { provider: 'plugin', url: '', key: '', model: '' };
-                    //const worldInfo = defaultWb ? await TavernAPI.getEnabledWorldInfo(defaultWb === '__auto__' ? null : defaultWb) : '';
-                    const worldInfo = await TavernAPI.getEnabledWorldInfo('卡兰德规则的DND5E');
+                    const worldInfo = defaultWb ? await TavernAPI.getEnabledWorldInfo(defaultWb === '__auto__' ? null : defaultWb) : '';
+                    // const worldInfo = await TavernAPI.getEnabledWorldInfo('卡兰德规则的DND5E');
 
                     this._charCreatorState = {
                         selectedPresetId: null,
@@ -1535,10 +1535,10 @@ export default {
             });
             if (confirmed) {
                 const allWorldbooks = await TavernAPI.getAllWorldbookNames();
-                //const worldInfo = selectedWb === '__auto__'
-                //    ? await TavernAPI.getEnabledWorldInfo()
-                //    : (selectedWb ? await TavernAPI.getEnabledWorldInfo(selectedWb) : '');
-                const worldInfo = await TavernAPI.getEnabledWorldInfo('卡兰德规则的DND5E');
+                const worldInfo = selectedWb === '__auto__'
+                   ? await TavernAPI.getEnabledWorldInfo()
+                   : (selectedWb ? await TavernAPI.getEnabledWorldInfo(selectedWb) : '');
+                //const worldInfo = await TavernAPI.getEnabledWorldInfo('卡兰德规则的DND5E');
 
                 this._charCreatorState = {
                     selectedPresetId: state.selectedPresetId,
